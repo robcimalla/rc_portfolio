@@ -1,15 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+	const { ref } = useSectionInView("Home", 0.5);
+	const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
 	return (
-		<section className="text-center mb-28 max-w-[50rem] sm:mb-0">
+		<section id="home" className="text-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]">
 			<div className="flex items-center justify-center">
 				<div className="relative">
 					<motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: "tween", duration: 0.2 }}>
@@ -21,10 +27,17 @@ export default function Intro() {
 				</div>
 			</div>
 			<motion.p initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl">
-				<span className="font-bold">{`Hello, I'm Robert.`}</span> I'm a <span className="font-bold">Software Developer</span> with <span className="font-bold">5 years</span> of experience. My focus is on building <span className="font-bold">modern, robust and scalable</span> web applications for startups and enterprise companies.
+				<span className="font-bold">{`Hello, I'm Robert.`}</span> Im a <span className="font-bold">Software Developer</span> with <span className="font-bold">5 years</span> of experience. My focus is on building <span className="font-bold">modern, robust and scalable</span> web applications for startups and enterprise companies.
 			</motion.p>
 			<motion.div initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium">
-				<Link className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition" href="#contact">
+				<Link
+					className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+					href="#contact"
+					onClick={() => {
+						setActiveSection("Contact");
+						setTimeOfLastClick(Date.now());
+					}}
+				>
 					Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
 				</Link>
 				<a href="/CV.pdf" download className="group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
