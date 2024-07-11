@@ -40,14 +40,14 @@ export default function Intro() {
 				>
 					Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
 				</Link>
-				<a href="/CV.pdf" download className="group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
+				{/* <a href="/CV.pdf" download className="group bg-white text-gray-700 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
 					Download CV
 					<HiDownload className="group-hover:translate-y-1 transition" />
-				</a>
-				<a href="https://linkedin.com/" target="_blank" className="bg-white text-gray-700 p4 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-110 hover:text-gray-950 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
+				</a> */}
+				<a href="https://www.linkedin.com/in/robert-cimalla-2756a8175/" target="_blank" className="bg-white text-gray-700 p4 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-110 hover:text-gray-950 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
 					<BsLinkedin />
 				</a>
-				<a href="https://github.com" target="_blank" className="bg-white text-gray-700 p4 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-110 hover:text-gray-950 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
+				<a href="https://github.com/robcimalla" target="_blank" className="bg-white text-gray-700 p4 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-110 hover:text-gray-950 hover:scale-110 active:scale-105 transition cursor-pointer border-black/10">
 					<BsGithub />
 				</a>
 			</motion.div>
