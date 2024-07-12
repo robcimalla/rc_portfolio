@@ -13,12 +13,12 @@ export default function About() {
 	return (
 		<motion.section ref={ref} initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.175 }} id="about" className="mb-28 max-w-[45rem] text-center leading-8 scroll-mt-28">
 			<SectionHeading>About me</SectionHeading>
-			<p className="text-gray-500 mb-3">
-				After graduating with a degree in <span className="font-medium">Accounting</span>, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned <span className="font-medium">full-stack web development</span>. <span className="italic">My favorite part of programming</span> is the problem-solving aspect. I <span className="underline">love</span> the feeling of finally figuring out a solution to a problem. My core stack is <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>. I am also familiar with TypeScript and Prisma. I am always looking to learn new technologies. I am currently looking for a <span className="font-medium">full-time position</span> as a software developer.
+			<p className="mb-3">
+				After graduating with a master degree in <span className="font-medium">Business Economics</span>, I embarked on a journey as a Software Engineer based in Hannover, Germany. At E.ON, I have been able to professionalize my skills and gain hands-on experience as a <span className="font-medium">full-stack developer</span>, building modern and scalable web applications. Specializing in backend development, platform monitoring, and creating custom web applications using technologies like Typescript, React, Azure, C#, .NET, and MySql, I thrive on solving problems and overcoming challenges. My core stack is <span className="font-medium">React, Next.js, Node.js, MongoDB and MySql</span>. While beginning with no prior experience, my passion and drive for technology have helped me grow into a proficient software developer. Always eager to learn and improve, I believe in the mantra: <span className="font-medium">{`it's simple but not easy.`}</span>
 			</p>
 
 			<p>
-				<span className="italic">When Im not coding</span>, I enjoy playing video games, watching movies, and playing with my dog. I also enjoy <span className="font-medium">learning new things</span>. I am currently learning about <span className="font-medium">history and philosophy</span>. Im also learning how to play the guitar.
+				<span className="italic">When Im not coding</span>, I enjoy going to the gym, being with my dog, and cooking the most delicious food I can get my hands on. While this is just a small glimpse into my personal and professional life, I hope it provides a meaningful insight into who you will hopefully be working with.
 			</p>
 		</motion.section>
 	);
