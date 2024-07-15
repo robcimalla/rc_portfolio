@@ -15,7 +15,7 @@ export default function Intro() {
 	const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
 	return (
-		<section id="home" className="text-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]">
+		<section id="home" ref={ref} className="text-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]">
 			<div className="flex items-center justify-center">
 				<div className="relative">
 					<motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: "tween", duration: 0.2 }}>
